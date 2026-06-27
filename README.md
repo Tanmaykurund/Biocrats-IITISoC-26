@@ -1,1 +1,0 @@
-# Biocrats-IITISoC-26
