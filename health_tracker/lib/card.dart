@@ -20,11 +20,20 @@ class CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.all(6),
       width: width,
       height: 150,
       decoration: BoxDecoration(
-        color: const Color.fromARGB(169, 54, 39, 113),
+        color: const Color.fromARGB(169, 29, 45, 86),
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: const Color.fromARGB(209, 4, 4, 7),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: const Offset(0, 3),
+          ),
+        ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
