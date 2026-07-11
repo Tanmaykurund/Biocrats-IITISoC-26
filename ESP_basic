@@ -1,0 +1,70 @@
+int hr;
+int spo2;
+float temp;
+
+String status;
+
+void setup() {
+  Serial.begin(115200);
+
+  randomSeed(analogRead(0));
+
+  Serial.println("Wearable Health Monitor Simulation");
+  Serial.println("----------------------------------");
+}
+
+void loop() {
+
+  // Simulated sensor readings
+  hr = random(50, 121);            // 50 - 120 BPM
+  spo2 = random(88, 101);          // 88 - 100 %
+  temp = random(350, 391) / 10.0; // 35.0 - 39.0 C
+
+  determineStatus();
+
+  printData();
+
+  delay(1000);
+}
+
+void determineStatus() {
+
+  status = "NORMAL";
+
+  if (hr > 100 || hr < 60 ||
+      spo2 < 95 ||
+      temp > 37.5) {
+
+    status = "WARNING";
+  }
+
+  if (hr > 115 ||
+      spo2 < 90 ||
+      temp > 38.5) {
+
+    status = "CRITICAL";
+  }
+}
+
+void printData() {
+
+  Serial.println("================================");
+
+  Serial.print("Heart Rate : ");
+  Serial.print(hr);
+  Serial.println(" BPM");
+
+  Serial.print("SpO2       : ");
+  Serial.print(spo2);
+  Serial.println(" %");
+
+  Serial.print("Temperature: ");
+  Serial.print(temp);
+  Serial.println(" C");
+
+  Serial.print("Status     : ");
+  Serial.println(status);
+
+  Serial.println("================================");
+  Serial.println();
+}
