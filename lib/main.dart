@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'bottom_nav.dart';
+import 'package:get/get.dart';
+import 'services/ble_controller.dart';
 
 void main() {
+  Get.put(BleController(), permanent: true);
   runApp(const MyApp());
 }
 
@@ -10,6 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: bottomNav());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: const BottomNav());
   }
 }

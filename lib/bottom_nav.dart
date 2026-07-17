@@ -3,14 +3,14 @@ import 'package:health_tracker/Screens/bluetooth_screen.dart';
 import 'package:health_tracker/Screens/historyScreen.dart';
 import 'package:health_tracker/home.dart';
 
-class bottomNav extends StatefulWidget {
-  const bottomNav({super.key});
+class BottomNav extends StatefulWidget {
+  const BottomNav({super.key});
 
   @override
-  State<bottomNav> createState() => _bottomNavState();
+  State<BottomNav> createState() => _BottomNavState();
 }
 
-class _bottomNavState extends State<bottomNav> {
+class _BottomNavState extends State<BottomNav> {
   int selectedIndex = 0;
   PageController pageController = PageController();
   void onTapped(int index) {

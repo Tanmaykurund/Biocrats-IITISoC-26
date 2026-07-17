@@ -41,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Color(0xFF050827),
       body: SafeArea(
         child: GetBuilder<BleController>(
-          init: BleController(),
           builder: (BleController controller) {
             return Center(
               child: Column(
