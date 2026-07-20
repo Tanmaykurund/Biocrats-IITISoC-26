@@ -24,7 +24,9 @@ dependencies:
   flutter_blue_plus: ^2.3.10
   get: ^4.7.3
   permission_handler: ^12.0.3
-  
+  path_provider: ^2.1.6
+  sqflite: ^2.4.3
+  path: ^1.9.1
 
 dev_dependencies:
   flutter_test:

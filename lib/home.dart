@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:health_tracker/Services/ble_controller.dart';
+import 'package:health_tracker/services/ble_controller.dart';
 import 'package:health_tracker/bluetooth_bar.dart';
 import 'package:health_tracker/card.dart';
 
@@ -16,7 +16,7 @@ class CustomHomeScreen extends StatelessWidget {
           builder: (mycontroller) {
             return Column(
               children: [
-                Bluetoothstatusbar(isConnected: BleController().isConnected),
+                Bluetoothstatusbar(isConnected: mycontroller.isConnected),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

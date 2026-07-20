@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
-import '../Services/ble_controller.dart';
+import '../services/ble_controller.dart';
 import 'package:get/get.dart';
 
 class MyHomePage extends StatefulWidget {
