@@ -42,7 +42,7 @@ class CustomHomeScreen extends StatelessWidget {
                 ),
                 CustomCard(
                   title: 'Temperature',
-                  value: mycontroller.temp?.round() ?? 0,
+                  value: mycontroller.temp ?? 0,
                   unit: '°C',
                   width: MediaQuery
                       .of(context)

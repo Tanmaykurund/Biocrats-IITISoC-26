@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_tracker/Screens/bluetooth_screen.dart';
 import 'package:health_tracker/Screens/historyScreen.dart';
-import 'package:health_tracker/home.dart';
+import 'package:health_tracker/Screens/home.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
